@@ -1,0 +1,41 @@
+public class Homework61 {
+
+    public enum Month {
+        JANUARY, FEBRUARY, MARCH, APRIL, MAY, JUNE, JULY, AUGUST, SEPTEMBER, OCTOBER, NOVEMBER, DECEMBER
+    }
+
+    public static void main(String[] args) {
+        Month month = Month.FEBRUARY;
+        int days = getDaysInMonth(month);
+        System.out.println("Количество дней в " + month.name() + ": " + days);
+    }
+
+    public static int getDaysInMonth(Month month) {
+
+        switch (month) {
+            case JANUARY:
+            case MARCH:
+            case MAY:
+            case JULY:
+            case AUGUST:
+            case OCTOBER:
+            case DECEMBER:
+                return 31;
+            case APRIL:
+            case JUNE:
+            case SEPTEMBER:
+            case NOVEMBER:
+                return 30;
+            case FEBRUARY:
+            default:
+                return 28;
+        }
+    }
+}
+
+
+"C:\Program Files\Java\jdk-17\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\lib\idea_rt.jar=61975:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.1\bin" -Dfile.encoding=UTF-8 -classpath C:\Users\milao\IdeaProjects\Java\Homework6\out\production\Homework6 Homework61
+Количество дней в FEBRUARY: 28
+
+Process finished with exit code 0
+
